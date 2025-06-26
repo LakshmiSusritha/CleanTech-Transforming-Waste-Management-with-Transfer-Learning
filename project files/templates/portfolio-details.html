@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result - CleanTech</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .result-container {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #1abc9c;
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+        
+        <h2>Predicted Class:</h2>
+        <p style="font-size: 24px;"><strong>{{ predict }}</strong></p>
+
+        <a href="/">← Classify Another Image</a>
+    </div>
+
+</body>
+</html>

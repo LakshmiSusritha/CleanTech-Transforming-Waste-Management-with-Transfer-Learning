@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IPython Predictions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #1abc9c;
+        }
+
+        .result {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            max-width: 200px;
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manual Predictions via IPython</h1>
+
+    <div class="result">
+        <h3>Image:</h3>
+        <img src="{{ url_for('static', filename='uploads/cardboard123.jpeg') }}" alt="Test Image">
+        <p><strong>Predicted Category:</strong> Recyclable</p>
+    </div>
+
+    <div class="result">
+        <h3>Image:</h3>
+        <img src="{{ url_for('static', filename='uploads/TEST_BIODEG_HFL_10.jpeg') }}" alt="Test Image">
+        <p><strong>Predicted Category:</strong> Biodegradable</p>
+    </div>
+
+    <div class="result">
+        <h3>Image:</h3>
+        <img src="{{ url_for('static', filename='uploads/TRAIN.4_NBIODEG_CCW_1491.jpg') }}" alt="Test Image">
+        <p><strong>Predicted Category:</strong> Trash</p>
+    </div>
+</body>
+</html>

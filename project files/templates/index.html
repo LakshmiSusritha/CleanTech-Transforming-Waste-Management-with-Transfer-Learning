@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CleanTech Waste Classifier</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='backgroundimage.jpeg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.65);
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        input[type=file], input[type=submit] {
+            margin: 10px 0;
+            padding: 10px;
+            width: 90%;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+        nav {
+            margin-top: -60px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0,0,0,0.6);
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/predict">Predict</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Solid Waste Classification</h1>
+        <p>Upload an image of waste to classify it as Biodegradable, Recyclable, or Trash.</p>
+        
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <input type="file" name="pc_image" required><br>
+            <input type="submit" value="Classify Image">
+        </form>
+    </div>
+
+</body>
+</html>
+

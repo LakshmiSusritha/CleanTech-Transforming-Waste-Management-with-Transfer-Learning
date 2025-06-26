@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - CleanTech</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("{{ url_for('static', filename='backgroundimage.jpeg') }}") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 60px 30px;
+            min-height: 100vh;
+        }
+
+        h1, h2 {
+            color: #1abc9c;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            background-color: rgba(20, 20, 20, 0.85);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="content">
+            <h1>About CleanTech</h1>
+            <p><strong>CleanTech</strong> is a waste classification web app built using transfer learning and deep learning models such as VGG16. The goal of the project is to support better waste segregation and improve municipal waste management efficiency.</p>
+
+            <h2>Project Features:</h2>
+            <ul>
+                <li>📷 Real-time image-based waste classification</li>
+                <li>♻️ Categories: Biodegradable, Recyclable, Trash</li>
+                <li>🤖 Powered by pre-trained VGG16 and transfer learning</li>
+                <li>🌐 User-friendly web interface built with Flask</li>
+            </ul>
+
+            <h2>Use Cases:</h2>
+            <ul>
+                <li>Smart city dustbins for on-the-spot classification</li>
+                <li>Recycling centers to reduce manual sorting</li>
+                <li>Factories for better industrial waste segregation</li>
+            </ul>
+
+            <div class="nav">
+                <a href="/">Home</a>
+                <a href="/predict">Predict</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
